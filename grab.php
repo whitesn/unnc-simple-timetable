@@ -1,6 +1,6 @@
 <?php
 require_once 'define.php';
-require_once 'function_main.php';
+require_once 'function.php';
 ?>
 
 <!DOCTYPE html>
