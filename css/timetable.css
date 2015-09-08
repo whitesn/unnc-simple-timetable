@@ -1,0 +1,25 @@
+body { padding-top: 70px; }
+.row-margin { margin-top: 10px; margin-bottom: 10px; }
+
+/* Timetable Customization */
+.generated-timetable-container > table { width: 100%; font-size: 12px; background: #fff; border: solid 1px #ddd; border-spacing: 0; border-collapse: collapse; }
+.generated-timetable-container table tr td { height: 25px; padding: 2px; margin: 0px; }
+.generated-timetable-container table tr td[class*="cell-border"] { border: solid 1px #ddd; }
+.generated-timetable-container table tr td.col-label-one { background: #222; color: #fff; border: solid 1px #ddd; } 
+.generated-timetable-container table tr td.row-label-one { text-align: center; background: #222; color: #fff; }
+.generated-timetable-container table tr td.object-cell-border { background: #ededed; color: #7e7e7e; padding: 0; vertical-align: top; overflow: hidden; }
+.generated-timetable-container table.object-cell-args { height: 30%; }
+
+.generated-timetable-container table td.col-label-one { width: 60px; }
+.generated-timetable-container table td.row-label-one { width: 35px; text-align: center; }
+
+.input-label-color { background: #ECE68B; }
+.generated-timetable-container { min-width: 1200px; }
+/* ======================= */
+
+/* Room Balances */
+.room-balance-row { margin: 20px 0 20px 0; padding: 20px 0 20px 0; border-top: solid 1px; border-bottom: solid 1px; border-color: #ededed; }
+.balance-crit { background: #D9534F; }
+.balance-low { background: #F0AD4E; }
+.balance-normal { background: #7DE46C; }
+.building-room-number-label { margin: 0 0 35px 0; }
