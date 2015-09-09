@@ -108,7 +108,7 @@ function print_new_timetable( $student_id ) {
 	
 	$weeks = get_timetable_week_based_on_time();
 	
-	curl_setopt( $ch, CURLOPT_URL, "http://timetablingunnc.nottingham.ac.uk:8007/reporting/Individual;Students;id;".$student_id."?template=SWSCUST+Student+Individual&weeks=$weeks&days=1-5&periods=3-20&Width=0&Height=0" );
+	curl_setopt( $ch, CURLOPT_URL, "http://timetablingunnc.nottingham.ac.uk:8005/individual.htm;Students;id;".$student_id."?template=SWSCUST+Student+Individual&weeks=$weeks&days=1-5&periods=3-20&Width=0&Height=0" );
 	curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, 30 );
 	curl_setopt( $ch, CURLOPT_USERAGENT,"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)" );
 	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
