@@ -35,7 +35,7 @@ require_once 'define.php';
 					<div class="col-sm-12">
 						<div class="alert alert-info alert-dismissible" role="alert">
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						  <strong>Note:</strong> Individual timetables are yet to be generated, please be patient.
+						  <strong>Note:</strong> New Timetables are up! Please request for a new one if your timetable is loaded from old cache.
 						</div>
 					</div>
 				</div>
