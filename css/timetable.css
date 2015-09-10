@@ -2,7 +2,7 @@ body { padding-top: 70px; }
 .row-margin { margin-top: 10px; margin-bottom: 10px; }
 
 /* Timetable Customization */
-.generated-timetable-container > table { width: 100%; font-size: 12px; background: #fff; border: solid 1px #ddd; border-spacing: 0; border-collapse: collapse; }
+.generated-timetable-container > table { min-width: 1000px; font-size: 12px; background: #fff; border: solid 1px #ddd; border-spacing: 0; border-collapse: collapse; }
 .generated-timetable-container table tr td { height: 25px; padding: 2px; margin: 0px; }
 .generated-timetable-container table tr td[class*="cell-border"] { border: solid 1px #ddd; }
 .generated-timetable-container table tr td.col-label-one { background: #222; color: #fff; border: solid 1px #ddd; } 
@@ -14,7 +14,8 @@ body { padding-top: 70px; }
 .generated-timetable-container table td.row-label-one { width: 35px; text-align: center; }
 
 .input-label-color { background: #ECE68B; }
-.generated-timetable-container { min-width: 1200px; }
+
+.generated-timetable-container { width: 100%; overflow: auto; }
 /* ======================= */
 
 /* Room Balances */

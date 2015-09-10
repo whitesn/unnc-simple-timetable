@@ -43,6 +43,10 @@ function is_cache_exists( $student_id ) {
 }
 
 function save_timetable_cache( $data, $student_id ) {
+	if ( !file_exists( 'timetables-cache' ) ) {
+		mkdir( 'timetables-cache', 0755, true );
+	}
+	
 	$fp = fopen( TIMETABLE_CACHE_DIR . "$student_id.cache", "w" ) or die( "Something went wrong, please contact the administrator!" );
 	fwrite( $fp, $data );
 	fclose( $fp );
