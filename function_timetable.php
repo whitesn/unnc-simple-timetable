@@ -82,7 +82,7 @@ function decode_and_print_json_timetable( $data ) {
 
 function get_current_teaching_week() {
 	$current_year = date( "y", time() );
-	$base_date 	  = strtotime( $current_year . "-" . BASE_TIME_FALL_SEMESTER );
+	$base_date 	  = strtotime( $current_year . "-" . BASE_TIME_FALL_SEMESTER + ACADEMIC_WEEK_ADDITION );
 	$current_date = time();
 	$days_difference = floor( ( $current_date - $base_date ) / ( 60 * 60 * 24 ) );
 	$current_teaching_week = ( floor( $days_difference / 7 ) <= 0 ) ? "- (Teaching week starts on September 15th)" : ( floor( $days_difference / 7 ) );
@@ -91,7 +91,7 @@ function get_current_teaching_week() {
 
 function get_timetable_week_based_on_time() {
 	$current_year = date( "y", time() );
-	$base_date 	  = strtotime( $current_year . "-" . BASE_TIME_FALL_SEMESTER );
+	$base_date 	  = strtotime( $current_year . "-" . BASE_TIME_FALL_SEMESTER + ACADEMIC_WEEK_ADDITION );
 	$current_date = time();
 	$days_difference = floor( ( $current_date - $base_date ) / ( 60 * 60 * 24 ) );
 	
