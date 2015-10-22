@@ -20,6 +20,7 @@ require_once 'define.php';
   <body>
   	<?php include_once 'header.php' ?>
 	<div class="container theme-showcase" role="main">
+	
 		<form action="grab.php" method="GET">
 			<div class="jumbotron">
 				<div class="row">
@@ -27,15 +28,6 @@ require_once 'define.php';
 						<div class="alert alert-info alert-dismissible" role="alert">
 						  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						  <strong>Note:</strong> Building Number and Room Number are optional, you don't have to input them to see timetable vice versa.
-						</div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="alert alert-info alert-dismissible" role="alert">
-						  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						  <strong>Note:</strong> New Timetables are up! Please request for a new one if your timetable is loaded from old cache.
 						</div>
 					</div>
 				</div>
@@ -70,6 +62,17 @@ require_once 'define.php';
 				
 				<div class="row">
 					<div class="col-sm-12 text-center"><button type="submit" class="btn btn-primary">Submit</button></div>
+				</div>
+				
+				<hr />
+				
+				<div class="wechat-barcode">
+					<div class="alert alert-info alert-dismissible" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					  <strong>Notice:</strong> I recently made a bot in WeChat to check Room Balances, try scanning the barcode below:
+					</div>
+					 
+					<img src="images/QR_Small.jpg" width = "200px" />
 				</div>
 			</div>
 		</form>

@@ -1,6 +1,9 @@
 body { padding-top: 70px; }
 .row-margin { margin-top: 10px; margin-bottom: 10px; }
 
+.wechat-barcode { margin: 20px 0 0 0; }
+.wechat-barcode img { display: block; margin: 0 auto; }
+
 /* Timetable Customization */
 .generated-timetable-container > table { min-width: 1000px; width: 100%; font-size: 12px; background: #fff; border: solid 1px #ddd; border-spacing: 0; border-collapse: collapse; }
 .generated-timetable-container table tr td { height: 25px; padding: 2px; margin: 0px; }
