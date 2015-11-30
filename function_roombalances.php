@@ -3,6 +3,10 @@ function is_room_exist( $string ) {
 	return strpos( $string, "<script>" ) === False;
 }
 
+function is_abnormal_value( $string ) {
+	return strpos( $string, "<font color='red'>" ) !== False;
+}
+
 function get_moon_ship_balance ( $string, $table_header ) {
 	$start_pos = strpos( $string, $table_header );
 	$start_pos = strpos( $string, "<td align=\"center\" bgcolor=\"#E8E8E8\">", $start_pos) + strlen( "<td align=\"center\" bgcolor=\"#E8E8E8\">" );
@@ -10,6 +14,11 @@ function get_moon_ship_balance ( $string, $table_header ) {
 	$len   	   = strpos( $string, "</td>", $start_pos) - $start_pos;
 	
 	$balance = substr( $string, $start_pos, $len );
+	
+	if( is_abnormal_value($balance) ) {
+		$balance = "?";
+	}
+	
 	return preg_replace('/\s+/', '', $balance);
 }
 
