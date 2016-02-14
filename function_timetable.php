@@ -81,21 +81,28 @@ function decode_and_print_json_timetable( $data ) {
 }
 
 function get_current_teaching_week() {
-	$current_year = date( "Y", time() );
-	$base_date    = strtotime($current_year . "-" . BASE_TIME_FALL_SEMESTER . " - " . ADDED_WEEKS_ACADEMIC . " weeks");
+    
+    $current_year = date( "Y", time() );
 	$current_date = time();
+    $month = date( "m", time() );
+    
+	if ( $month > 6 && $month <= 12 ) {
+        $base_date = strtotime($current_year . "-" . BASE_TIME_FALL_SEMESTER . " - " . ADDED_WEEKS_ACADEMIC . " weeks");
+    } else {
+        $base_date = strtotime($current_year . "-" . BASE_TIME_SPRING_SEMESTER);
+    }
+    
 	$days_difference = floor( ( $current_date - $base_date ) / ( 60 * 60 * 24 ) );
-	$current_teaching_week = ( floor( $days_difference / 7 ) <= 0 ) ? "- (Teaching week starts on September 15th)" : ( floor( $days_difference / 7 ) );
-	return $current_teaching_week;
+    $current_teaching_week = ( floor( $days_difference / 7 ) <= 0 ) ? "-" : ( floor( $days_difference / 7 ) );
+	    
+    return $current_teaching_week;
 }
 
 function get_timetable_week_based_on_time() {
-	$current_year = date( "Y", time() );
-	$base_date    = strtotime($current_year . "-" . BASE_TIME_FALL_SEMESTER . " - " . ADDED_WEEKS_ACADEMIC . " weeks");
-	$current_date = time();
-	$days_difference = floor( ( $current_date - $base_date ) / ( 60 * 60 * 24 ) );
-	
-	if ( $days_difference <= ( TOTAL_WEEKS_FALL_SEMESTER * 7 ) ) {
+
+    $month = date("m", time());
+    
+	if ( $month > 6 && $month <= 12 ) {
 		return "1-15"; // Fall Semester
 	} else {
 		return "21-36"; // Spring Semester
